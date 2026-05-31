@@ -1,0 +1,15 @@
+# Terraform local data
+**/.terraform/*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+
+# Sensitive variable files
+*.tfvars
+
+# macOS
+.DS_Store
