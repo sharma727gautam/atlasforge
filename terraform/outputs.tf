@@ -1,9 +1,14 @@
 output "container_name" {
-  description = "Container Name"
+  description = "Final Container Name"
   value       = docker_container.web.name
 
 }
+
+output "environment" {
+  description = "current environment"
+  value       = local.environment
+}
 output "application_url" {
-  description = "nginx_url"
-  value       = "http://localhost:${var.external_port}"
+  description = "Application url"
+  value       = local.application_url
 }
