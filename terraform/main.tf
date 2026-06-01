@@ -12,15 +12,9 @@ provider "docker" {
 
 }
 
-resource "docker_image" "nginx" {
-  name = "nginx:latest"
-}
 
-resource "docker_container" "web" {
-  name  = local.full_container_name
-  image = docker_image.nginx.image_id
-  ports {
-    internal = 80
-    external = var.external_port
-  }
+module "container" {
+  source         = "./modules/container"
+  container_name = "atlasforge-nginx-dev"
+  external_port  = 8080
 }
