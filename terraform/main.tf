@@ -15,6 +15,6 @@ provider "docker" {
 
 module "container" {
   source         = "./modules/container"
-  container_name = "atlasforge-nginx-dev"
-  external_port  = 8080
+  container_name = "${var.container_name}-${var.environment}"
+  external_port  = var.external_port
 }
