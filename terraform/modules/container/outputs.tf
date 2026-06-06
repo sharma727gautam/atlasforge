@@ -1,7 +1,6 @@
-output "container_name" {
-  value = docker_container.web.name
-}
-
-output "container_id" {
-  value = docker_container.web.id
+output "container_names" {
+  value = [
+    for container in docker_container.web :
+    container.name
+  ]
 }

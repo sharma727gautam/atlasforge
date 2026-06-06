@@ -1,4 +1,3 @@
-
 variable "environment" {
 
   description = "Deployment environment"
@@ -6,16 +5,9 @@ variable "environment" {
   type = string
 }
 
-variable "container_name" {
+variable "containers" {
 
-  description = "Container name"
+  description = "Container definitions"
 
-  type = string
-}
-
-variable "external_port" {
-
-  description = "External host port"
-
-  type = number
+  type = map(number)
 }

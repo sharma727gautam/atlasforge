@@ -1,13 +1,7 @@
-variable "container_name" {
 
-  description = "Container name"
+variable "containers" {
 
-  type = string
-}
+  description = "Container definitions"
 
-variable "external_port" {
-
-  description = "Host port"
-
-  type = number
+  type = map(number)
 }

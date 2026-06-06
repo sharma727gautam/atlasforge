@@ -16,7 +16,9 @@ resource "docker_image" "nginx" {
 
 resource "docker_container" "web" {
 
-  name = var.container_name
+  for_each = var.containers
+
+  name = "atlasforge-${each.key}"
 
   image = docker_image.nginx.image_id
 
@@ -24,6 +26,6 @@ resource "docker_container" "web" {
 
     internal = 80
 
-    external = var.external_port
+    external = each.value
   }
 }

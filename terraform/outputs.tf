@@ -1,11 +1,7 @@
-output "container_name" {
+output "container_names" {
   description = "Final Container Name"
-  value       = module.container.container_name
+  value       = module.container.container_names
 
-}
-
-output "container_id" {
-  value = module.container.container_id
 }
 
 output "workspace_name" {
