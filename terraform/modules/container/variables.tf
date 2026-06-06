@@ -5,3 +5,8 @@ variable "containers" {
 
   type = map(number)
 }
+
+variable "name_prefix" {
+  description = "Container naming prefix"
+  type        = string
+}

@@ -17,5 +17,6 @@ module "container" {
 
   source = "./modules/container"
 
-  containers = var.containers
+  containers  = var.containers
+  name_prefix = local.environment_prefix
 }

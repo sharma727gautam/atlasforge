@@ -18,7 +18,7 @@ resource "docker_container" "web" {
 
   for_each = var.containers
 
-  name = "atlasforge-${each.key}"
+  name = "${var.name_prefix}-${each.key}"
 
   image = docker_image.nginx.image_id
 

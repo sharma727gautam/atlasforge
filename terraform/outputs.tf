@@ -10,3 +10,12 @@ output "workspace_name" {
 
   value = terraform.workspace
 }
+
+output "environment_prefix" {
+  value = local.environment_prefix
+}
+
+output "monitoring_enabled" {
+
+  value = local.monitoring_enabled
+}
